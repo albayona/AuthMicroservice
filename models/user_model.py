@@ -70,14 +70,7 @@ class AdminModel(UserModel):
 
     def _init_(self, username: str, email: str, code: int, first_name: str, last_name: str,
                password: str, description: str, picture: str):
-        self.username = username
-        self.email = email
-        self.code = code
-        self.first_name = first_name
-        self.last_name = last_name
-        self.password = password
-        self.description = description
-        self.picture = picture
+
 
     def json(self):
         return {'first_name': self.first_name, 'last_name': self.last_name,
@@ -109,14 +102,6 @@ class ProfessorModel(UserModel):
 
     def _init_(self, username: str, email: str, code: int, first_name: str, last_name: str,
                password: str, description: str, picture: str):
-        self.username = username
-        self.email = email
-        self.code = code
-        self.first_name = first_name
-        self.last_name = last_name
-        self.password = password
-        self.description = description
-        self.picture = picture
 
 
 
@@ -160,20 +145,8 @@ class StudentModel(UserModel):
 
     def __init__(self, username: str, email: str, code: int, first_name: str, last_name: str,
                  password: str, description: str, picture: str, semester: int):
-        self.username = username
-        self.email = email
-        self.code = code
-        self.first_name = first_name
-        self.last_name = last_name
-        self.password = password
-        self.description = description
-        self.picture = picture
-        self.semester = semester
 
-    def json(self):
-        return {'first_name': self.first_name, 'last_name': self.last_name,
-                'username': self.username, 'email': self.email, 'code': self.code,
-                 'description': self.description,
-                'picture': self.picture, 'semester': self.semester}
+
+
 
 
